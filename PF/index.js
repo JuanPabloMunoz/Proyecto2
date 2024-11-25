@@ -1,5 +1,6 @@
 const arregloPpreguntas = [ ];
 const arregloRespuestas = [ ];
+let contadorModificacion=-1;
 
 function alternativas() {
     const arregloAlternativas = [ ]; 
@@ -14,7 +15,8 @@ function alternativas() {
 }
 
 function preguntas() {
-    for (let i = 1; i <= 2; i++) {
+    const CantidadDePreguntas=8
+    for (let i = 1; i <= CantidadDePreguntas; i++) {
         const pregunta = prompt(`Ingrese la pregunta número: ${i}`);
         arregloPpreguntas.push(pregunta);
         console.log(`Pregunta número ${i}: ${pregunta}`);
@@ -23,7 +25,7 @@ function preguntas() {
         const alternativasAux = alternativas();
         arregloPpreguntas[i - 1].alternativasPregunta = alternativasAux;
     }
-
+contadorModificacion=(contadorModificacion+1);
     
 }
 
@@ -32,25 +34,28 @@ function preguntas() {
 function respuestas(preguntas) {
 
     for (let k = 0; k < preguntas.length; k++) {
-        arregloRespuestas.push(prompt(`Responda a la pregunta número ${k + 1}:`));
+        arregloRespuestas.push(prompt(`Mire las alternativas de la consola y responda a la pregunta número ${k + 1}:`));
     }
 }
 
 
 function mostrar(){
-    console.log("Se han creado con éxito las siguientes preguntas:");
-    console.log(arregloPpreguntas);
+    console.log(`Usted añadio un total de ${arregloPpreguntas.length} preguntas: ${arregloPpreguntas.join(", ")}`);
+        
+    console.log(`Usted ingreso un total de ${arregloRespuestas.length} respuestas: ${arregloRespuestas.join(", ")}`);
     
-    console.log("Estas son las respuestas ingresadas:");
-    console.log(arregloRespuestas);
+    console.log(`Usted modifico en ${contadorModificacion} oprtunidades la encuesta(as) `);
+    
+
 }
 
+alert("Si es la primera ejecuta la encuesta, selecione la opción (4) salir, luego abra la consola y recargue el navegador con la tecla (F5), si usted ya realizo estos pasos, ignore la advertencia");
 
 
-const ejecutar = () => {let nuevaEncuesta = true;
+const ejecutar = () => {let repetir = true;
 
-    while (nuevaEncuesta) {
-        let menu =Number(prompt("Ingrese una opción:\n-----------------------\n(1) Crear Encusta.\n(2) Responder esncuesta.\n(3) Mostrar encuesta.\n(4) salir. "));
+    while (repetir) {
+         menu =Number(prompt("Ingrese una opción:\n-----------------------\n(1) Agregar Preuntas.\n(2) Responder esncuesta.\n(3) Mostrar encuesta.\n(4) salir. "));
 
 
         if (menu === 1) {
@@ -60,7 +65,7 @@ const ejecutar = () => {let nuevaEncuesta = true;
         } else if (menu === 3) {
             mostrar();
         } else if (menu === 4) {
-            nuevaEncuesta = false;
+            repetir = false;
             console.log("Grcias por haber usado el programa Encuestas.");
         } else {
             alert("Opción inválida. Intenta nuevamente.");

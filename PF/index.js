@@ -47,8 +47,25 @@ function mostrar(){
 
 
 
-const preguntasCreadas = preguntas();
-const respuestasDadas = respuestas(preguntasCreadas);
+const ejecutar = () => {let nuevaEncuesta = true;
+
+    while (nuevaEncuesta) {
+        let menu =Number(prompt("Ingrese una opción:\n-----------------------\n(1) Crear Encusta.\n(2) Responder esncuesta.\n(3) Mostrar encuesta.\n(4) salir. "));
 
 
+        if (menu === 1) {
+            preguntas();
+        } else if (menu === 2) {
+            respuestas(arregloPpreguntas);
+        } else if (menu === 3) {
+            mostrar();
+        } else if (menu === 4) {
+            nuevaEncuesta = false;
+            console.log("Grcias por haber usado el programa Encuestas.");
+        } else {
+            alert("Opción inválida. Intenta nuevamente.");
+        }
+    }
+};
 
+ejecutar();

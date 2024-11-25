@@ -49,6 +49,6 @@ function mostrar(){
 
 const preguntasCreadas = preguntas();
 const respuestasDadas = respuestas(preguntasCreadas);
-mostrar();
+
 
 

@@ -4,3 +4,4 @@ para finalizar dejare algunas imagenes del programa.
 
 ![proyecto2 codigo](https://github.com/user-attachments/assets/f22f59d3-c2b3-4251-981c-f210db6bd9de)
 
+![proyecto2 imagen1](https://github.com/user-attachments/assets/e879365b-0c6e-4f17-a4b0-7b688b84d33f)

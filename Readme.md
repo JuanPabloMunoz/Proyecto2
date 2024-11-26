@@ -9,3 +9,4 @@ para finalizar dejare algunas imagenes del programa.
 ![proyecto2 imagen1](https://github.com/user-attachments/assets/e879365b-0c6e-4f17-a4b0-7b688b84d33f)
 
 
+![proyecto2 imagen2](https://github.com/user-attachments/assets/9050246a-b478-4e41-8fa4-d9aa3f656b66)
